@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:MauiBorderShadow.Controls"
              x:Class="MauiBorderShadow.MainPage">
 			 
     <ScrollView>
@@ -8,33 +9,36 @@
             Spacing="25" 
             Padding="30,0" 
             VerticalOptions="Center">
-
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-                
-            <Label 
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-            
-            <Label 
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button 
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
+            <controls:Card x:Name="Card1"
+                           Title="Card #1"
+                           Subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed 
+                                     diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam 
+                                     erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci 
+                                     tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo 
+                                     consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate 
+                                     velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis 
+                                     at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum 
+                                     zzril delenit augue duis dolore te feugait nulla facilisi."
+                           Background="white"
+                           Padding="16,16"
+                           Margin="0,3,0,3"/>
+            <controls:Card x:Name="Card2"
+                           Title="Card #2"
+                           Subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed 
+                                     diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam 
+                                     erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci 
+                                     tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo 
+                                     consequat. Duis autem vel eum "
+                           Background="white"
+                           Padding="16,16"
+                           Margin="0,3,0,3"/>
+            <controls:Card x:Name="Card3"
+                           Title="Card #3"
+                           Subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed 
+                                     diam nonummy nibh euismod tincidunt ut "
+                           Background="white"
+                           Padding="16,16"
+                           Margin="0,3,0,3"/>
         </VerticalStackLayout>
     </ScrollView>
  

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="contentView"
+             x:Class="MauiBorderShadow.Controls.Card">
+    <Border x:Name="border"
+            BindingContext="{x:Reference contentView}"
+            Padding="{Binding Padding}"
+            Margin="{Binding Margin}"
+            StrokeThickness="0.5"
+            BackgroundColor="White">
+       
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="40"/>
+        </Border.StrokeShape>
+        <Border.Shadow>
+            <Shadow Brush="Black"
+                    Opacity="1"
+                    Radius="{OnPlatform iOS=20, Android=20, WinUI=5, Tizen=5}"/>
+        </Border.Shadow>
+
+        <Grid>
+            <StackLayout x:Name="stackLayout" 
+                         Padding="10,10,10,10">
+                <Label Text="{Binding Title, FallbackValue='XXXXX XX XXXX'}"
+                       TextColor="Black"/>
+                <Button Text="Expand Card"
+                        TextColor="White"
+                        Clicked="Button_Clicked"
+                        BackgroundColor="{StaticResource Primary}"
+                        WidthRequest="150"/>
+            </StackLayout>
+        </Grid>
+    </Border>
+</ContentView>
